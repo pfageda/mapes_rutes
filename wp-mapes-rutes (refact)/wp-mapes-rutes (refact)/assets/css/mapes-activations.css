@@ -1,0 +1,695 @@
+/* ===== GESTIÓ D'ACTIVACIONS - CSS OPTIMITZAT ===== */
+
+.mapes-activations-admin {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ===== HEADER ===== */
+.mapes-admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.mapes-admin-header h2 {
+  margin: 0;
+  color: #1e81b0;
+  font-size: 28px;
+}
+
+/* ===== ESTADÍSTIQUES ===== */
+.mapes-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.mapes-stat-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 4px solid #1e81b0;
+}
+
+.mapes-stat-card.created {
+  border-left-color: #0073aa;
+}
+
+.mapes-stat-card.pending {
+  border-left-color: #ff8c00;
+  animation: pulse-pending 2s infinite;
+}
+
+.mapes-stat-card.confirmed {
+  border-left-color: #00a32a;
+}
+
+.mapes-stat-number {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #1e81b0;
+}
+
+.mapes-stat-label {
+  color: #6c757d;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+@keyframes pulse-pending {
+  0%,
+  100% {
+    box-shadow: 0 2px 8px rgba(255, 140, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 2px 15px rgba(255, 140, 0, 0.4);
+  }
+}
+
+/* ===== SECCIONS D'ACTIVACIONS ===== */
+.activations-section {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.activations-section.priority {
+  border: 2px solid #ff8c00;
+  background: linear-gradient(135deg, #fff8f0 0%, #ffffff 100%);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #495057;
+  font-size: 20px;
+}
+
+.section-count {
+  background: #1e81b0;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+/* ===== GRID D'ACTIVACIONS PENDENTS ===== */
+.activations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  padding: 0;
+}
+
+.activation-card {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.activation-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.activation-card.pending {
+  border-left: 4px solid #ff8c00;
+}
+
+.activation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.activation-title strong {
+  color: #1e81b0;
+  font-size: 20px;
+}
+
+.activation-title small {
+  color: #6c757d;
+  display: block;
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+.activation-status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.activation-status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.activation-info {
+  margin-bottom: 15px;
+}
+
+.info-item {
+  margin-bottom: 8px;
+  color: #495057;
+}
+
+.activation-documents {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.documents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.doc-link {
+  display: inline-block;
+  color: #1e81b0;
+  text-decoration: none;
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.doc-link:hover {
+  background: #e3f2fd;
+  border-color: #1e81b0;
+}
+
+/* ===== ACCIONS D'ACTIVACIÓ ===== */
+.activation-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mapes-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.mapes-btn.success {
+  background: #00a32a;
+  color: white;
+}
+
+.mapes-btn.success:hover {
+  background: #008a24;
+}
+
+.mapes-btn.danger {
+  background: #d63638;
+  color: white;
+}
+
+.mapes-btn.danger:hover {
+  background: #b32d2f;
+}
+
+.mapes-btn.secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.mapes-btn.secondary:hover {
+  background: #545b62;
+}
+
+/* ===== TAULES D'ACTIVACIONS ===== */
+.activations-table {
+  overflow-x: auto;
+}
+
+.mapes-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.mapes-table th,
+.mapes-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.mapes-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+}
+
+.mapes-table tr:hover {
+  background: #f8f9fa;
+}
+
+/* ===== STATUS BADGES ===== */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.creada {
+  background: #cce5f0;
+  color: #1e81b0;
+}
+
+.status-badge.pendent_confirmacio {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.confirmada {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.confirmed {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* ===== ACCIONS DE TAULA COMPACTES ===== */
+.actions {
+  display: flex;
+  gap: 4px;
+  white-space: nowrap;
+  width: 120px;
+  min-width: 120px;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  margin-right: 4px;
+  padding: 0 !important;
+  font-size: 14px !important;
+  border-radius: 4px !important;
+  vertical-align: middle;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #495057;
+}
+
+.action-btn:hover {
+  background: #e9ecef;
+  border-color: #1e81b0;
+  color: #1e81b0;
+  transform: scale(1.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.action-btn:last-child {
+  margin-right: 0;
+}
+
+/* Colors específics per cada acció */
+.action-btn.view,
+.action-btn[title*="Veure"],
+.action-btn[onclick*="showActivationDetails"] {
+  color: #1e81b0;
+  border-color: rgba(30, 129, 176, 0.3);
+}
+
+.action-btn.view:hover,
+.action-btn[title*="Veure"]:hover,
+.action-btn[onclick*="showActivationDetails"]:hover {
+  background: #e3f2fd !important;
+  border-color: #1e81b0 !important;
+  color: #1e81b0 !important;
+}
+
+.action-btn.edit,
+.action-btn[title*="Editar"],
+.action-btn[onclick*="editActivation"] {
+  color: #ff8c00;
+  border-color: rgba(255, 140, 0, 0.3);
+}
+
+.action-btn.edit:hover,
+.action-btn[title*="Editar"]:hover,
+.action-btn[onclick*="editActivation"]:hover {
+  background: #fff8f0 !important;
+  border-color: #ff8c00 !important;
+  color: #ff8c00 !important;
+}
+
+.action-btn.delete,
+.action-btn[title*="Esborrar"],
+.action-btn[onclick*="deleteActivation"] {
+  color: #dc3545;
+  border-color: rgba(220, 53, 69, 0.3);
+}
+
+.action-btn.delete:hover,
+.action-btn[title*="Esborrar"]:hover,
+.action-btn[onclick*="deleteActivation"]:hover {
+  background: #f8d7da !important;
+  border-color: #dc3545 !important;
+  color: #dc3545 !important;
+}
+
+/* ===== ESTATS BUITS ===== */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6c757d;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+/* ===== BOTÓ ACTIVACIONS AL MAPA PRINCIPAL ===== */
+.activations-btn {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 12px 16px;
+  background: #1e81b0;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.activations-btn:hover {
+  background: #1a6d96;
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== MODAL ===== */
+.mapes-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapes-modal {
+  background: white;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.activation-details .detail-row {
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* ===== 📱 RESPONSIVITAT COMPLETA ===== */
+@media (max-width: 768px) {
+  /* Header responsiu */
+  .mapes-admin-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  /* Stats responsiu */
+  .mapes-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Grid d'activacions responsiu */
+  .activations-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .activation-card {
+    padding: 12px;
+  }
+
+  .activation-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .activation-actions {
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  /* ⭐ TAULES CONVERTIDES EN CARDS AUTOMÀTICAMENT */
+  .activations-table .mapes-table {
+    border: 0;
+  }
+
+  .activations-table .mapes-table thead {
+    display: none;
+  }
+
+  .activations-table .mapes-table tbody {
+    display: block;
+  }
+
+  .activations-table .mapes-table tr {
+    display: block;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .activations-table .mapes-table td {
+    display: block;
+    text-align: left !important;
+    border: none;
+    padding: 8px 0;
+    position: relative;
+    padding-left: 35%;
+    word-wrap: break-word;
+  }
+
+  /* Etiquetes automàtiques per cada camp */
+  .activations-table .mapes-table td::before {
+    content: attr(data-label) ": ";
+    position: absolute;
+    left: 0;
+    width: 30%;
+    font-weight: 600;
+    color: #6c757d;
+    text-align: left;
+  }
+
+  /* Etiquetes específiques per columna */
+  .activations-table .mapes-table td:nth-child(1)::before {
+    content: "Ruta: ";
+  }
+
+  .activations-table .mapes-table td:nth-child(2)::before {
+    content: "Usuari: ";
+  }
+
+  .activations-table .mapes-table td:nth-child(3)::before {
+    content: "Data: ";
+  }
+
+  .activations-table .mapes-table td:nth-child(4)::before {
+    content: "Estat: ";
+  }
+
+  .activations-table .mapes-table td:nth-child(5)::before {
+    content: "Monuments: ";
+  }
+
+  .activations-table .mapes-table td:nth-child(6)::before {
+    content: "Pes: ";
+  }
+
+  .activations-table .mapes-table td:nth-child(7)::before {
+    content: "Accions: ";
+  }
+
+  /* Estils especials per accions en mòbil */
+  .activations-table .mapes-table td.actions {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+    padding-left: 0 !important;
+    text-align: center !important;
+    border-top: 1px solid #f0f0f0 !important;
+    margin-top: 12px !important;
+    padding-top: 12px !important;
+  }
+
+  .activations-table .mapes-table td.actions::before {
+    display: none;
+  }
+
+  .activations-table .mapes-table td.actions .action-btn {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    margin: 0 3px 0 0 !important;
+    padding: 0 !important;
+    font-size: 16px !important;
+    border-radius: 6px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: none !important;
+  }
+
+  .activations-table .mapes-table td.actions .action-btn:last-child {
+    margin-right: 0 !important;
+  }
+
+  .activations-table .mapes-table td.actions .action-btn:hover {
+    transform: scale(1.1) !important;
+  }
+
+  /* Primera fila destacada */
+  .activations-table .mapes-table td:first-child {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e81b0;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+  }
+
+  /* Barres de pes responsives */
+  .activations-table .mapes-table .weight-progress {
+    display: block;
+  }
+
+  .activations-table .mapes-table .weight-bar {
+    width: 100% !important;
+    height: 6px !important;
+    margin-top: 8px;
+  }
+}
+
+/* ⭐ ASSEGURAR TAULES NORMALS EN PANTALLES GRANS */
+@media (min-width: 769px) {
+  .activations-table .mapes-table {
+    display: table !important;
+  }
+
+  .activations-table .mapes-table thead {
+    display: table-header-group !important;
+  }
+
+  .activations-table .mapes-table tbody {
+    display: table-row-group !important;
+  }
+
+  .activations-table .mapes-table tr {
+    display: table-row !important;
+  }
+
+  .activations-table .mapes-table td {
+    display: table-cell !important;
+  }
+
+  /* Limitar amplada del grid en pantalles grans */
+  .activations-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px)) !important;
+    justify-content: start !important;
+  }
+}

@@ -1,0 +1,1846 @@
+/* Mapes Frontend Styles */
+.mapes-complete-app {
+  display: flex;
+  gap: 20px;
+  min-height: 600px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Panell lateral */
+.mapes-sidebar {
+  width: 350px;
+  background: #f9f9f9;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.mapes-stats {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mapes-stat-card {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mapes-stat-label {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.mapes-stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2271b1;
+}
+
+/* Rutes */
+.mapes-routes-selector {
+  margin-bottom: 20px;
+}
+.mapes-activations-btn,
+.mapes-routes-toggle,
+.mapes-points-toggle {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #2271b1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.mapes-routes-list {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.mapes-route-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.mapes-route-item:hover {
+  background: #f5f5f5;
+}
+
+.mapes-route-item.selected {
+  background: #e7f3ff;
+}
+
+.mapes-route-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mapes-route-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 1px #ddd;
+}
+
+.mapes-route-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.mapes-route-actions button {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.mapes-route-actions button:hover {
+  background: #ddd;
+}
+
+/* Monuments */
+.mapes-points-list {
+  margin-bottom: 20px;
+}
+
+.mapes-list-header {
+  font-weight: bold;
+  padding: 10px;
+  background: white;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid #ddd;
+  border-bottom: none;
+}
+
+.mapes-list-content {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.mapes-point-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.mapes-point-item:hover {
+  background: #f5f5f5;
+}
+
+.mapes-point-item.selected {
+  background: #e7f3ff;
+}
+
+.mapes-point-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mapes-point-number {
+  background: #2271b1;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.mapes-point-title {
+  font-weight: 500;
+}
+
+.mapes-point-description {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.mapes-point-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.mapes-point-actions button {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.mapes-point-actions button:hover {
+  background: #ddd;
+}
+
+/* Botons */
+.mapes-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.mapes-btn.primary {
+  background: #00a32a;
+  color: white;
+}
+
+.mapes-btn.secondary {
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* Mapa */
+.mapes-map-container {
+  flex: 1;
+  position: relative;
+}
+
+.mapes-map {
+  width: 100%;
+  height: 100%;
+}
+
+.mapes-map-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Modals (només per crear - no editar) */
+.mapes-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.mapes-modal-content {
+  background: white;
+  border-radius: 8px;
+  padding: 0;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mapes-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  background: #f9f9f9;
+  border-radius: 8px 8px 0 0;
+}
+
+.mapes-modal-header h3 {
+  margin: 0;
+}
+
+.mapes-modal-header button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Formularis */
+.mapes-form-group {
+  margin-bottom: 20px;
+}
+
+.mapes-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.mapes-form-group input,
+.mapes-form-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.mapes-coordinates-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.mapes-input-toggle {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.mapes-input-toggle button {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.mapes-input-toggle button.active {
+  background: #2271b1;
+  color: white;
+}
+
+.mapes-color-picker {
+  display: flex;
+  gap: 5px;
+}
+
+.mapes-color-btn {
+  width: 30px;
+  height: 30px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mapes-color-btn.active {
+  border-color: #2271b1;
+}
+
+.mapes-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.mapes-form-actions button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Panell d'edició inline */
+.mapes-edit-panel {
+  background: white;
+  border-top: 2px solid #2271b1;
+  padding: 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mapes-edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+
+.mapes-edit-header h3 {
+  margin: 0;
+  color: #2271b1;
+}
+
+.mapes-edit-header button {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.mapes-edit-content {
+  padding: 20px;
+}
+
+.mapes-edit-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.mapes-edit-form-left,
+.mapes-edit-form-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Editor de monuments de ruta */
+.mapes-route-point-item {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.mapes-route-point-item:hover {
+  background: #f0f8ff;
+}
+
+.mapes-route-point-item:has(input[type="checkbox"]:checked) {
+  background: #e7f3ff;
+  border-color: #2271b1;
+}
+
+.mapes-route-point-check {
+  display: flex;
+  justify-content: center;
+}
+
+.mapes-route-point-check input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.mapes-route-point-name {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.mapes-route-point-name strong {
+  color: #2271b1;
+}
+
+.mapes-route-point-controls {
+  display: flex;
+  gap: 15px;
+}
+
+.mapes-control-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+}
+
+.mapes-control-group label {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.mapes-control-group input {
+  width: 60px;
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.mapes-control-group input:focus {
+  border-color: #2271b1;
+  outline: none;
+}
+
+.mapes-route-points-editor {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  background: white;
+}
+
+.mapes-route-points-editor h4 {
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mapes-complete-app {
+    flex-direction: column;
+  }
+
+  .mapes-sidebar {
+    width: 100%;
+    max-height: 400px;
+  }
+
+  .mapes-edit-form {
+    grid-template-columns: 1fr;
+  }
+
+  .mapes-user-app {
+    display: flex;
+    gap: 20px;
+    min-height: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .mapes-routes-list-user {
+    margin-bottom: 20px;
+  }
+
+  .mapes-route-item-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .mapes-route-item-user:hover {
+    background: #f0f8ff;
+  }
+
+  .mapes-route-item-user.selected {
+    background: #e7f3ff;
+    border-left: 4px solid #2271b1;
+  }
+
+  .mapes-route-count {
+    font-size: 11px;
+    color: #666;
+    background: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 10px;
+  }
+
+  .mapes-route-info-panel {
+    background: white;
+    border-top: 2px solid #2271b1;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .mapes-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
+  }
+
+  .mapes-info-content {
+    padding: 20px;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .route-points-summary ul {
+    max-height: 100px;
+    overflow-y: auto;
+    margin: 10px 0;
+  }
+
+  .activity-form-section {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .form-group label {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .checkbox-group {
+    display: flex;
+    gap: 15px;
+  }
+
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    grid-column: 1 / -1;
+  }
+}
+
+.mapes-user-app {
+  display: flex;
+  gap: 20px;
+  min-height: 600px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mapes-routes-list-user {
+  margin-bottom: 20px;
+}
+
+.mapes-route-item-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mapes-route-item-user:hover {
+  background: #f0f8ff;
+}
+
+.mapes-route-item-user.selected {
+  background: #e7f3ff;
+  border-left: 4px solid #2271b1;
+}
+
+.mapes-route-count {
+  font-size: 11px;
+  color: #666;
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.mapes-route-info-panel {
+  background: white;
+  border-top: 2px solid #2271b1;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.mapes-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+
+.mapes-info-content {
+  padding: 20px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.route-points-summary ul {
+  max-height: 100px;
+  overflow-y: auto;
+  margin: 10px 0;
+}
+
+.activity-form-section {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 15px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  grid-column: 1 / -1;
+}
+.route-points-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.route-points-table th,
+.route-points-table td {
+  padding: 8px 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.route-points-table th {
+  background: #f5f5f5;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.route-points-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.route-points-table tr:hover {
+  background: #f0f8ff;
+}
+
+.position-badge {
+  background: #2271b1;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.weight-badge {
+  background: #00a32a;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.monument-name {
+  font-weight: 500;
+  color: #2271b1;
+}
+
+.mapes-route-info-sidebar {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 15px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.mapes-info-header-sidebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #eee;
+  border-radius: 6px 6px 0 0;
+}
+
+.mapes-info-header-sidebar h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #2271b1;
+}
+
+.mapes-info-content-sidebar {
+  padding: 10px;
+}
+
+.info-compact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.route-points-table-sidebar {
+  width: 100%;
+  font-size: 11px;
+  border-collapse: collapse;
+}
+
+.route-points-table-sidebar th,
+.route-points-table-sidebar td {
+  padding: px 6px;
+  border: 1px solid #eee;
+  text-align: left;
+  font-size: 16px;
+}
+
+.route-points-table-sidebar th {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+.weight-badge-small {
+  background: #00a32a;
+  color: white;
+  padding: 1px 4px;
+  border-radius: 2px;
+  font-size: 10px;
+}
+
+.mapes-activity-form {
+  margin-top: 15px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.mapes-route-actions-panel {
+  background: white;
+  border-top: 2px solid #2271b1;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.route-actions-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.action-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  min-width: 180px;
+}
+
+.mapes-activity-form-page {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  background: #f9f9f9;
+  padding: 25px;
+  border-bottom: 1px solid #eee;
+  border-radius: 8px 8px 0 0;
+}
+
+.route-badge {
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.form-section {
+  padding: 30px;
+}
+
+.points-selector {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  background: #f9f9f9;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.point-option {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 8px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.point-option:hover {
+  border-color: #1e81b0;
+  box-shadow: 0 2px 4px rgba(30, 129, 176, 0.1);
+}
+
+.point-option input[type="checkbox"] {
+  margin-right: 12px;
+  transform: scale(1.2);
+}
+
+.point-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.point-number {
+  font-weight: bold;
+  color: #1e81b0;
+  margin-right: 8px;
+}
+
+.point-title {
+  font-weight: 600;
+  color: #333;
+}
+
+.point-coords {
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 2px;
+}
+
+.no-points {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 20px;
+}
+.point-weight {
+  font-weight: bold;
+  color: #1e81b0;
+  margin-left: 5px;
+}
+
+.point-option input:disabled + .point-info {
+  opacity: 0.5;
+}
+
+.point-option.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+/* ⭐ ESTILS PER AL PANELL D'ACCIONS A LA NOVA UBICACIÓ */
+.mapes-route-actions-panel {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.route-actions-header h4 {
+  margin: 0 0 15px 0;
+  color: #1e81b0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.route-actions-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  flex: 1;
+  min-width: 140px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.action-btn.primary {
+  background: #1e81b0;
+  color: white;
+}
+
+.action-btn.primary:hover {
+  background: #1a6d96;
+}
+
+.action-btn.secondary {
+  background: #28a745;
+  color: white;
+}
+
+.action-btn.secondary:hover {
+  background: #218838;
+}
+
+/*ASSEGURAR QUE LA SIDEBAR TINGUI SCROLL SI CAL */
+.mapes-sidebar {
+  overflow-y: auto;
+  max-height: 100vh;
+}
+/* ⭐ ESTRUCTURA PRINCIPAL */
+.mapes-user-app {
+  display: flex;
+  gap: 20px;
+  height: 100vh;
+}
+
+.mapes-sidebar {
+  width: 350px;
+  min-width: 350px;
+  overflow-y: auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+}
+
+.mapes-main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ⭐ PANELL DE DETALLS DE LA RUTA (NOU) */
+.mapes-route-details-panel {
+  background: white;
+  border-top: 2px solid #1e81b0;
+  padding: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.route-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.route-details-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.route-color-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid white;
+  box-shadow: 0 0 0 1px #ccc;
+}
+
+.route-details-title h3 {
+  margin: 0;
+  color: #1e81b0;
+  font-size: 18px;
+}
+
+.route-details-stats {
+  display: flex;
+  gap: 15px;
+}
+
+.route-stat {
+  background: #e9ecef;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.route-details-description {
+  margin-bottom: 20px;
+}
+
+.route-points-list h4 {
+  margin: 0 0 10px 0;
+  color: #495057;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.route-points-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.route-point-item {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.route-point-item:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+.route-point-name {
+  font-weight: 500;
+  color: #1e81b0;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.route-point-coords {
+  font-size: 11px;
+  color: #6c757d;
+}
+/* Millores visuals pels monuments de ruta */
+.route-point-item {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.route-point-item:hover {
+  background: #e3f2fd;
+  border-color: #1e81b0;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(30, 129, 176, 0.2);
+}
+
+.route-point-name {
+  font-weight: 600;
+  color: #1e81b0;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.route-point-coords {
+  font-size: 12px;
+  color: #6c757d;
+  margin-bottom: 4px;
+  font-family: "Courier New", monospace;
+}
+
+.route-point-weight {
+  font-size: 12px;
+  color: #28a745;
+  font-weight: 500;
+  background: #e8f5e8;
+  padding: 2px 6px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.route-actions-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.action-btn {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.action-btn.primary {
+  background: #1e81b0;
+  color: white;
+}
+
+.action-btn.secondary {
+  background: #28a745;
+  color: white;
+}
+/* ⭐ TARGETES D'ACTIVACIÓ MÉS COMPACTES */
+.activations-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 15px !important; /* Reduït de 20px */
+  max-width: 100% !important;
+}
+
+.activation-card {
+  background: #fff !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  padding: 10px !important; /* Reduït de 20px */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.2s ease !important;
+  max-width: 320px !important; /* ⭐ AMPLADA MÀXIMA */
+  width: 100% !important;
+}
+
+.activation-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ⭐ HEADER MÉS COMPACTE */
+.activation-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  margin-bottom: 12px !important; /* Reduït de 15px */
+  padding-bottom: 8px !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+/* ⭐ RESPONSIVE PER PANTALLES PETITES */
+@media (max-width: 768px) {
+  .activations-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .activation-card {
+    padding: 12px !important;
+    max-width: none !important;
+  }
+
+  .mapes-btn.small {
+    padding: 5px 8px !important;
+    font-size: 10px !important;
+  }
+}
+/* ========================================
+   🎯 RESPONSIVE PER USUARI-MAPS 
+======================================== */
+
+@media (max-width: 768px) {
+  /* Layout principal usuari */
+  .mapes-user-app {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+  }
+
+  /* Sidebar usuari responsive */
+  .mapes-user-app .mapes-sidebar {
+    width: 100%;
+    min-width: auto;
+    max-height: 40vh;
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+    overflow-y: auto;
+  }
+
+  /* Àrea principal del mapa */
+  .mapes-user-app .mapes-main-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Container del mapa específic */
+  .mapes-user-app [id*="map-"] {
+    height: 60vh;
+    min-height: 400px;
+    width: 100%;
+  }
+
+  /* Panells de detalls */
+  .route-details-panel,
+  .route-actions-panel {
+    max-height: 30vh;
+    overflow-y: auto;
+  }
+
+  /* Botons d'acció responsive */
+  .route-actions-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .action-btn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Targetes de ruta */
+  .mapes-route-item-user {
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smartphone molt petit */
+  .mapes-user-app {
+    gap: 10px;
+  }
+
+  .mapes-user-app .mapes-sidebar {
+    padding: 15px;
+    max-height: 35vh;
+  }
+
+  /* Mapa més petit en mòbils petits */
+  .mapes-user-app [id*="map-"] {
+    height: 50vh;
+    min-height: 300px;
+  }
+}
+/* ==============================
+   📍 SELECTOR DE MONUMENTS USUARI 
+============================== */
+
+.mapes-points-selector {
+  margin-bottom: 20px;
+}
+
+.mapes-points-toggle {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #e17055; /* Color diferent de les rutes */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.mapes-points-toggle:hover {
+  background: #d35235;
+}
+
+.points-search-container {
+  margin-bottom: 10px;
+}
+
+.points-search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.mapes-points-list {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.point-item-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.point-item-user:hover {
+  background: #f8f9fa;
+}
+
+.point-item-user:last-child {
+  border-bottom: none;
+}
+
+.point-info-user {
+  flex: 1;
+}
+
+.point-name-user {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.point-location-user {
+  font-size: 12px;
+  color: #666;
+}
+
+.point-status-indicator-user {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+/* Panell de detalls del monument */
+.point-details-panel {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.point-details-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.point-details-title h3 {
+  margin: 0;
+  color: #333;
+}
+
+.point-close-btn {
+  background: #ccc;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.point-details-content {
+  display: grid;
+  gap: 10px;
+}
+
+.point-detail-item {
+  display: flex;
+  gap: 10px;
+}
+
+.point-detail-label {
+  font-weight: 500;
+  min-width: 80px;
+  color: #555;
+}
+
+.point-detail-value {
+  color: #333;
+  flex: 1;
+}
+/* ==============================
+   📍 SELECTOR DE MONUMENTS USUARI AL SIDEBAR
+============================== */
+
+.mapes-points-selector {
+  margin-top: 20px;
+}
+
+.mapes-points-toggle {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #e17055; /* Color taronja per diferenciar */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.mapes-points-toggle:hover {
+  background: #d35235;
+}
+
+.points-search-container {
+  margin-bottom: 10px;
+}
+
+.points-search-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.mapes-points-list {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.point-item-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.point-item-user:hover {
+  background: #f8f9fa;
+}
+
+.point-item-user:last-child {
+  border-bottom: none;
+}
+
+.point-info-user {
+  flex: 1;
+}
+
+.point-name-user {
+  font-weight: 500;
+  color: #333;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.point-location-user {
+  font-size: 11px;
+  color: #666;
+}
+
+.point-status-indicator-user {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 8px;
+  border: 1px solid #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.no-points-found {
+  padding: 15px;
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+  font-style: italic;
+}
+/* ==============================
+   📱 RESPONSIVITAT MILLORADA
+============================== */
+
+.mapes-user-app {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 500px;
+  gap: 15px;
+}
+
+.mapes-sidebar {
+  flex: 0 0 300px;
+  min-width: 280px;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.mapes-main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.mapes-map-container {
+  position: relative;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.mapes-map {
+  width: 100% !important;
+  background: #e5e3df;
+}
+
+/* ⭐ PANELL DETALLS RESPONSIU */
+.point-details-panel {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 15px;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-height: 40vh; /* Màxim 40% de l'alçada de la pantalla */
+}
+
+/* ==============================
+   📱 RESPONSIVE DESIGN
+============================== */
+
+/* Tablets i mòbils grans */
+@media (max-width: 1024px) {
+  .mapes-sidebar {
+    flex: 0 0 250px;
+    min-width: 250px;
+  }
+
+  .point-details-panel {
+    max-height: 35vh;
+  }
+}
+
+/* Mòbils */
+@media (max-width: 768px) {
+  .mapes-user-app {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mapes-sidebar {
+    flex: none;
+    width: 100%;
+    max-height: 300px;
+    order: 2; /* Sidebar després del mapa en mòbil */
+  }
+
+  .mapes-main-area {
+    flex: none;
+    width: 100%;
+    order: 1; /* Mapa primer en mòbil */
+  }
+
+  .point-details-panel {
+    max-height: 250px;
+    font-size: 14px;
+  }
+
+  .point-detail-label {
+    min-width: 80px;
+    font-size: 13px;
+  }
+
+  .point-detail-value {
+    font-size: 13px;
+  }
+}
+
+/* Mòbils petits */
+@media (max-width: 480px) {
+  .mapes-sidebar {
+    max-height: 250px;
+  }
+
+  .point-details-panel {
+    max-height: 200px;
+    font-size: 13px;
+  }
+}
+/* ==============================
+   📍 PANELL DETALLS MONUMENTS (COPIANT DEL QUE FUNCIONA)
+============================== */
+
+.point-details-panel {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 15px;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: none; /* Amagat per defecte */
+  max-height: 400px;
+}
+
+.point-details-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  background: #f8f9fa;
+}
+
+.point-details-title h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.point-close-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.point-close-btn:hover {
+  background: #c82333;
+}
+
+.point-details-content {
+  padding: 15px;
+}
+
+.point-detail-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  align-items: flex-start;
+}
+
+.point-detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.point-detail-label {
+  font-weight: 600;
+  min-width: 100px;
+  color: #555;
+  font-size: 14px;
+}
+
+.point-detail-value {
+  color: #333;
+  flex: 1;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+/* ==============================
+   📱 RESPONSIVE PELS DETALLS MONUMENTS
+============================== */
+
+@media (max-width: 768px) {
+  .point-details-panel {
+    max-height: 250px;
+    font-size: 14px;
+  }
+
+  .point-detail-label {
+    min-width: 80px;
+    font-size: 13px;
+  }
+
+  .point-detail-value {
+    font-size: 13px;
+  }
+
+  .point-details-title h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .point-details-panel {
+    max-height: 200px;
+    font-size: 13px;
+  }
+
+  .point-details-content {
+    padding: 12px;
+  }
+}
